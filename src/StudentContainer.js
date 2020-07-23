@@ -8,7 +8,7 @@ function StudentContainer() {
   console.log(data);
 
   return (
-    <div class="text">
+    <div className="text">
       {data.map((props) => (
         <li key={props.Id}>
           <Link to={`/${props.Name}`}>{props.Name}</Link>
