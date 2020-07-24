@@ -16,8 +16,8 @@ nav {
 }
 
 .nav-links{
-  width: 40%;
-  display: flex;
+  width: 80%;
+  display: inline-flex;
   justify-content: space-around;
   align-items: center;
   list-style: none;

@@ -1,0 +1,15 @@
+import React from "react";
+
+
+const Studentpagina = (props) => {
+  return (
+    <div>
+      <h1> {props.studentName}</h1>
+      <div>
+        <p>Hier komt alle data van: {props.studentName} </p>
+      </div>
+    </div>
+  );
+};
+
+export default Studentpagina;
