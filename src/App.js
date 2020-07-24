@@ -28,16 +28,16 @@ function App() {
     </Route>
   ))
   const sortAssignment = [...new Set(AllData.map((item) => item.assignment))];
-  console.log("getAssignment: ", sortAssignment);
+  console.log("sortAssignment: ", sortAssignment);
 
   const assignmentList = AllData.map((item) => item.assignment);
   console.log("assignmentList: ", assignmentList);
 
   const sortDifficulty = [...new Set(AllData.map((item) => item.difficulty))];
-  console.log("getDifficulty: ", sortDifficulty);
+  console.log("sortDifficulty: ", sortDifficulty);
 
   const sortEnjoyment = [...new Set(AllData.map((item) => item.enjoyment))];
-  console.log("getDifficulty: ", sortEnjoyment);
+  console.log("sortDifficulty: ", sortEnjoyment);
 
   return (
     
