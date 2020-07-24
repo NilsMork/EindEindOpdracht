@@ -3,6 +3,7 @@ import Students from "./components/Students"
 import Home from "./components/Home"
 import AllData from './AllData'
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Victory from './victory/Victory';
 import './App.css';
 
 function App() {
@@ -51,7 +52,11 @@ function App() {
           {createRoute}
         </Switch>
       </div>
+      <div>
+      <Victory />
+      </div>
     </Router>
+    
   );
 }
 
