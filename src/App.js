@@ -1,9 +1,5 @@
 import React from 'react';
 import Students from "./components/Students"
-// import Rahima from './components/Rahima';
-// import Sandra from './components/Sandra';
-// import Wietske from './components/Wietske';
-// import Storm from './components/Storm';
 import Home from "./components/Home"
 import AllData from './AllData'
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
