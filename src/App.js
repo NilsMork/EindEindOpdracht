@@ -3,7 +3,7 @@ import Students from "./components/Students"
 import Home from "./components/Home"
 import AllData from './AllData'
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import Victory from './victory/Victory';
+// import Victory from './victory/Victory';
 import './App.css';
 
 function App() {
@@ -11,8 +11,12 @@ function App() {
   const sortAllNames = AllData.map((item) => item.name);
   console.log("alle-namen: ", sortAllNames);
 
+  const sortAllAssignments = AllData.map((item) => item.assignment);
+  console.log("alle-assignments: ", sortAllAssignments);
+
   const removeDoubleNames = [...new Set(AllData.map((item) => item.name))];
   console.log("Student-niet-dubbel: ", removeDoubleNames);
+
 
   const createlinks = removeDoubleNames.map((name) => (
     <li key={name}>
@@ -27,11 +31,6 @@ function App() {
       />
     </Route>
   ))
-  const sortAssignment = [...new Set(AllData.map((item) => item.assignment))];
-  console.log("sortAssignment: ", sortAssignment);
-
-  const assignmentList = AllData.map((item) => item.assignment);
-  console.log("assignmentList: ", assignmentList);
 
   const sortDifficulty = [...new Set(AllData.map((item) => item.difficulty))];
   console.log("sortDifficulty: ", sortDifficulty);
@@ -48,12 +47,20 @@ function App() {
           {createlinks}
         </ul>
         <Switch>
-          <Route path="/" exact component={Home} />
+          <Route path="/" exact> 
+            <Home
+            removeDoubleNames={removeDoubleNames}
+            sortAllAssignments={sortAllAssignments}
+            AllData={AllData}
+          />
+          </Route>
+          <Route>
           {createRoute}
+          </Route>
         </Switch>
       </div>
       <div>
-      <Victory />
+      {/* <Victory /> */}
       </div>
     </Router>
     
