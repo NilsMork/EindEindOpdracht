@@ -15,7 +15,7 @@ nav {
   color: black;
 }
 
-.nav-links{
+.navLinks{
   width: 80%;
   display: inline-flex;
   justify-content: space-around;

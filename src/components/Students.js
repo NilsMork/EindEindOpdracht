@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const Studentpagina = (props) => {
+const Students = (props) => {
   return (
     <div>
       <h1> {props.studentName}</h1>
@@ -12,4 +12,4 @@ const Studentpagina = (props) => {
   );
 };
 
-export default Studentpagina;
+export default Students;

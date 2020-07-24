@@ -4,6 +4,7 @@ import Students from "./components/Students"
 // import Sandra from './components/Sandra';
 // import Wietske from './components/Wietske';
 // import Storm from './components/Storm';
+import Home from "./components/Home"
 import AllData from './AllData'
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
@@ -45,27 +46,19 @@ function App() {
     
     <Router>
       <div>
-        <ul className="nav-links">
+        <ul className="navLinks">
           <Link to="/">Home</Link>
           {createlinks}
         </ul>
         <Switch>
-          <ul>
           <Route path="/" exact component={Home} />
           {createRoute}
-          </ul>
         </Switch>
       </div>
     </Router>
   );
 }
 
-
-const Home = () => (
-  <div>
-    <h1>Home</h1>
-  </div>
-);
 
 
 export default App;
