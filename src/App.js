@@ -1,14 +1,13 @@
 import React from 'react';
 import AllData from './data/AllData'
 import AverageDasboard from "./components/AverageDasboard"
-import Students from "./components/Students"
+import StudentDashboard from "./components/StudentDashboard"
 import {BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import './App.css';
 
 function App() {
 
   const studentList = [...new Set(AllData.map((item) => item.name))];
-  console.log("Student-niet-dubbel: ", studentList);
 
   const getAssignmentList = [
     ...new Set(AllData.map((x) => x.assignment)),
@@ -23,8 +22,6 @@ function App() {
     return 0;
   });
 
-  console.log("getAssignmentList", getAssignmentList)
-
   const getEnjoymentScore = (name, assignment) => {
     const enjoyment = AllData
       .filter((item) => {
@@ -35,8 +32,6 @@ function App() {
       })
       return enjoyment[0].enjoyment;
   };
-
-  console.log("getEnjoymentScore", getEnjoymentScore)
 
   const getDifficultyScore = (name, assignment) => {
     const difficulty = AllData
@@ -49,8 +44,6 @@ function App() {
       return difficulty[0].difficulty;
   };
 
-  console.log("getDifficultyScore", getDifficultyScore)
-
   const createlinks = studentList.map((name) => (
    <ul className="Links">
    <li key={name}>
@@ -61,7 +54,7 @@ function App() {
 
   const createRoute = studentList.map((name) => (
     <Route path={`/${name}`} key={name}>
-      <Students
+      <StudentDashboard
          studentList={studentList}
          student={name}
          assignmentList={getAssignmentList}
@@ -80,7 +73,6 @@ function App() {
           <Link to="/">Average</Link>
           {createlinks}
         </ul>
-        <br></br>
         <Switch>
           <Route path="/" exact> 
             <AverageDasboard 
@@ -95,10 +87,10 @@ function App() {
         </Switch>
       </div>
       <div>
-      <div className="footer">&copy;Nils Mork - Winc - 2020</div>
-      <div className="glitchLine-thin"></div>
-      <div className="glitchLine-thick"></div>
-      <div className="glitchLine-thinnest"></div>
+        <div className="footer">&copy;Nils Mork - Winc - 2020</div>
+        <div className="glitchLine-thin"></div>
+        <div className="glitchLine-thick"></div>
+        <div className="glitchLine-thinnest"></div>
       </div>
     </Router>
     

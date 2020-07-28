@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "./Chart"
 
-function Students({ student, enjoymentScore, assignmentList, difficultyScore }) {
+function StudentDashboard({ student, enjoymentScore, assignmentList, difficultyScore }) {
   const assignmentAverageWithLabels = assignmentList.map((assignment) => ({
      assignment: assignment,
      difficulty: difficultyScore(student, assignment),
@@ -21,4 +21,4 @@ function Students({ student, enjoymentScore, assignmentList, difficultyScore }) 
   );
 }
 
-export default Students;
+export default StudentDashboard;
