@@ -87,7 +87,7 @@ a:hover{
 
 .glitchLine-thin {
   opacity: 0.3;
-  width: 1200px;
+  width: 1400px;
   height: 3px;
   position: absolute;
   animation: Line-thin 7s;
@@ -103,7 +103,7 @@ a:hover{
   opacity: 0.3;
   margin-top: 30px;
   margin-bottom: 200;
-  width: 1200px;
+  width: 1400px;
   height: 7px;
   position: absolute;
   animation: Line-thick 7s;
@@ -118,7 +118,7 @@ a:hover{
 .glitchLine-thinnest {
   opacity: 0.3;
   margin-top: 200px;
-  width: 1200px;
+  width: 1400px;
   height: 1px;
   position: absolute;
   animation: Line-thick 7s;
