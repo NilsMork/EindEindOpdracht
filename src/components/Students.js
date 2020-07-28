@@ -1,15 +1,24 @@
 import React from "react";
+import Chart from "./Chart"
 
+function Students({ student, enjoymentScore, assignmentList, difficultyScore }) {
+  const assignmentAverageWithLabels = assignmentList.map((assignment) => ({
+     assignment: assignment,
+     difficulty: difficultyScore(student, assignment),
+     enjoyment: enjoymentScore(student, assignment),
+     label: `Difficulty: ${difficultyScore(student, assignment
+     )} Enjoyment: ${enjoymentScore(student, assignment)}`,
+  }));
 
-const Students = (props) => {
   return (
-    <div>
-      <h1> {props.studentName}</h1>
-      <div>
-        <p>Hier komt alle data van: {props.studentName} </p>
-      </div>
-    </div>
+     <div>
+        <h1>~ {student}_</h1>
+        <br />
+        <Chart 
+          dataForChart={assignmentAverageWithLabels} 
+        />
+     </div>
   );
-};
+}
 
 export default Students;
